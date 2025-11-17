@@ -208,10 +208,3 @@ def ping():
 
 if __name__ == "__main__":
     app.run(debug=False, use_reloader=False)
-
-@app.post("/callback")
-def callback():
-    body = request.get_json()
-    print("\n🔥 Webhook 來了！")
-    print(body)
-    return "OK"
