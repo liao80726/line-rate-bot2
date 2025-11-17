@@ -2,16 +2,11 @@ from flask import Flask, request
 import requests
 from bs4 import BeautifulSoup
 import pytz
-from datetime import datetime, timedelta
+from datetime import datetime
 from apscheduler.schedulers.background import BackgroundScheduler
 import atexit
 
-from flask import Flask
 app = Flask(__name__)
-
-@app.get("/ping")
-def ping():
-    return "pong", 200
 
 CHANNEL_ACCESS_TOKEN = "len8qAgKqRjima/sFKIUVng5gIj4NuitM6TIVMZPkTe0SSS9yJf5a4VXN9gKLC2dio3EkTr/xTIj7vQLeisE8Mh8BbH+HQhNmeIDzbcf3ox4mFFKN+1ZDCkbayU2hHxr58BrkfrPWilTataBbq0nxgdB04t89/1O/w1cDnyilFU="
 TO_USER_ID = "Cb43625b143f5e4a951344f3879ac0d37"
